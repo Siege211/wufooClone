@@ -17,7 +17,12 @@ const FormViewer = (props) => {
 		{props.fields.map( 
 
 			 (field,i) => {
-			 		return <Field key={`field#${i}`} inputType={field.type}/>
+			 		return (
+			 			<Field key={`field#${i}`} inputType={field.type}>
+			 				<div onClick={()=>props.removeField(i)}>Delete this field</div>
+			 				
+			 			</Field>
+			 		)
 			} 
 
 		)}

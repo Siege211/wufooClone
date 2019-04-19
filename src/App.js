@@ -29,6 +29,7 @@ class App extends Component {
       ] 
     };
     this.addField = this.addField.bind(this);
+    this.removeField = this.removeField.bind(this);
   }
   addField(fieldType) {
     //uses setState to add a field object to state.fields
@@ -37,11 +38,21 @@ class App extends Component {
       fields: [...prevState.fields,{type:fieldType.btnName}]
     }))
   }
+
+  removeField(field_Index) {
+    console.log(field_Index);
+    this.setState({
+      fields: this.state.fields.filter((_, i) => i !== field_Index)
+    })
+  }
+
   render() {
     return (
       <div className="App" style={appStyle}>
         <FormBuilder addField={this.addField}/>
-        <FormViewer fields={this.state.fields}/>
+        <FormViewer 
+          fields={this.state.fields}
+          removeField={this.removeField}/>
       </div>
     );
   }
