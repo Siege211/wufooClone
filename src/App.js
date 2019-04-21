@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import logo from './logo.svg';
+import { bindActionCreators } from 'redux';
+import * as Actions from './actions';
 import './App.css';
 import FormBuilder from './components/FormBuilder.jsx';
 import FormViewer from './components/FormViewer.jsx';
+import FormViewerRedux from './components/FormViewerRedux.jsx';
 
 const appStyle = {
   display: "flex",
@@ -54,11 +57,27 @@ class App extends Component {
         <FormViewer 
           fields={this.state.fields}
           removeField={this.removeField}/>
+          <FormViewerRedux 
+          fields={this.props.fields}
+          removeField={this.removeField}/>
       </div>
     );
   }
 }
 
 
+function mapStateToProps(state) {
+  return {
+    fields: state.fields
+  };
+}
 
-export default App;
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(Actions, dispatch)
+  };
+}
+
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(App);
