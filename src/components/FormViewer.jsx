@@ -19,7 +19,7 @@ const FormViewer = (props) => {
 			 (field,i) => {
 			 		return (
 			 			<Field key={`field#${i}`} inputType={field.type}>
-			 				<div onClick={()=>props.removeField(i)}>Delete this field</div>
+			 				<div style={{color:"red"}} onClick={()=>props.removeField(i)}>Delete this field</div>
 			 				
 			 			</Field>
 			 		)
