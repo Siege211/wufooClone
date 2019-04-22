@@ -28,7 +28,7 @@ const FormBuilder = (props) => {
 					<button 
 						style={btnStyle}
 						key={`Button#${i}`}
-						onClick={()=>{console.log("at invocation:",props.addField);props.addField(btnName)}}>
+						onClick={()=>{props.addField(btnName)}}>
 						{btnName}
 					</button>
 				)
