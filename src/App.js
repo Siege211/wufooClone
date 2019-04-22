@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 import * as Actions from './actions';
 import './App.css';
 import FormBuilder from './components/FormBuilder.jsx';
+import FormBuilderRedux from './components/FormBuilderRedux.jsx';
 import FormViewer from './components/FormViewer.jsx';
 import FormViewerRedux from './components/FormViewerRedux.jsx';
 
@@ -51,9 +52,11 @@ class App extends Component {
   }
 
   render() {
+    console.log("App props:", this.props)
     return (
       <div className="App" style={appStyle}>
         <FormBuilder addField={this.addField}/>
+        <FormBuilderRedux addField={this.props.actions.addField}/>
         <FormViewer 
           fields={this.state.fields}
           removeField={this.removeField}/>

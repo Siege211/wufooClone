@@ -6,10 +6,6 @@ const fieldStyle = {
 	justifySelf: "center"
 }
 
-const field_and_Delete_Style = {
-	display: "flex",
-	flexDirection: "row"
-}
 
 const Field = (props) => { 
 	if (props.inputType==="textSingle") {

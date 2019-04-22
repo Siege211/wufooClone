@@ -10,11 +10,13 @@ const formStyle = {
 }
 
 const FormViewerRedux = (props) => { 
+	let iterable = props.fields.fields?props.fields.fields:props.fields;
 	return (
 
 	<form style={formStyle}>
 		
-		{props.fields.map( 
+		{
+			iterable.map( 
 
 			 (field,i) => {
 			 		return (
