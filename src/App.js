@@ -6,6 +6,7 @@ import * as Actions from './actions';
 import './App.css';
 import FormBuilderRedux from './components/FormBuilderRedux.jsx';
 import FormViewerRedux from './components/FormViewerRedux.jsx';
+import ReactPaginate from 'react-paginate';
 
 const appStyle = {
   display: "flex",
@@ -37,11 +38,22 @@ class App extends Component {
   render() {
     return (
       <div className="App" style={appStyle}>
+      <ReactPaginate
+          breakLabel={'...'}
+          breakClassName={'break-me'}
+          pageCount={this.state.pageCount}
+          marginPagesDisplayed={2}
+          pageRangeDisplayed={5}
+          onPageChange={this.handlePageClick}
+          containerClassName={'pagination'}
+          subContainerClassName={'pages pagination'}
+          activeClassName={'active'}
+        />
         <FormBuilderRedux addField={this.props.actions.addField}/>
-        
-          <FormViewerRedux 
+        <FormViewerRedux 
           fields={this.props.fields}
-          removeField={this.props.actions.removeField}/>
+          removeField={this.props.actions.removeField}
+        />
       </div>
     );
   }
