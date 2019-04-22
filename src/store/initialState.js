@@ -4,6 +4,9 @@ const initialState = {
           type: "textSingle"
         },
         {
+          type: "textSingle"
+        },
+        {
           type: "textParagraph"
         },
         {
