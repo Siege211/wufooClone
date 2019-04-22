@@ -45,14 +45,12 @@ class App extends Component {
   }
 
   removeField(field_Index) {
-    console.log(field_Index);
     this.setState({
       fields: this.state.fields.filter((_, i) => i !== field_Index)
     })
   }
 
   render() {
-    console.log("App props:", this.props)
     return (
       <div className="App" style={appStyle}>
         <FormBuilder addField={this.addField}/>
@@ -62,7 +60,7 @@ class App extends Component {
           removeField={this.removeField}/>
           <FormViewerRedux 
           fields={this.props.fields}
-          removeField={this.removeField}/>
+          removeField={this.props.actions.removeField}/>
       </div>
     );
   }

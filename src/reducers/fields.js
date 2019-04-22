@@ -23,11 +23,10 @@ export default function updateFieldsList(state = initialState,action) {
     case "ADD_FIELD":
       return Object.assign({},{
         fields: Array.isArray(state)?state.concat({type:action.fieldType}):state.fields.concat({type:action.fieldType})
-      })
-    case removeField:
-    return {
-      ...state, data: action.fieldType
-    }
+      });
+    case "REMOVE_FIELD":
+    console.log("state in removeField case: ", state);
+    return Object.assign({},{fields:Array.isArray(state)?state.filter((_, i) => i !== action.fieldIndex):state.fields.filter((_, i) => i !== action.fieldIndex)});
     default: 
     return state.fields;
   }
