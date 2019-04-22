@@ -1,21 +1,6 @@
 import {addField,removeField} from '../actions/';
 import initialState from '../store/initialState.js';
-// const initialState = {
-//   fields: [
-//         {
-//           type: "textSingle"
-//         },
-//         {
-//           type: "textParagraph"
-//         },
-//         {
-//           type: "multipleChoice"
-//         },
-//         {
-//           type: "checkBoxes"
-//         }
-//       ]
-// }
+
 
 
 export default function updateFieldsList(state = initialState,action) {
