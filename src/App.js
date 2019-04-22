@@ -4,9 +4,7 @@ import logo from './logo.svg';
 import { bindActionCreators } from 'redux';
 import * as Actions from './actions';
 import './App.css';
-import FormBuilder from './components/FormBuilder.jsx';
 import FormBuilderRedux from './components/FormBuilderRedux.jsx';
-import FormViewer from './components/FormViewer.jsx';
 import FormViewerRedux from './components/FormViewerRedux.jsx';
 
 const appStyle = {
@@ -33,31 +31,14 @@ class App extends Component {
         }
       ] 
     };
-    this.addField = this.addField.bind(this);
-    this.removeField = this.removeField.bind(this);
-  }
-  addField(fieldType) {
-    //uses setState to add a field object to state.fields
-    console.log(fieldType.btnName);
-    this.setState(prevState => ({
-      fields: [...prevState.fields,{type:fieldType.btnName}]
-    }))
   }
 
-  removeField(field_Index) {
-    this.setState({
-      fields: this.state.fields.filter((_, i) => i !== field_Index)
-    })
-  }
 
   render() {
     return (
       <div className="App" style={appStyle}>
-        <FormBuilder addField={this.addField}/>
         <FormBuilderRedux addField={this.props.actions.addField}/>
-        <FormViewer 
-          fields={this.state.fields}
-          removeField={this.removeField}/>
+        
           <FormViewerRedux 
           fields={this.props.fields}
           removeField={this.props.actions.removeField}/>
