@@ -1,4 +1,5 @@
 const initialState = { 
+      page: "Add a Field",
       fields: [
         {
           type: "textSingle"

@@ -35,10 +35,15 @@ class App extends Component {
 
 
   render() {
+    console.log(this.props);
     return (
       <div className="App" style={appStyle}>
       
-        <FormBuilderRedux addField={this.props.actions.addField}/>
+        <FormBuilderRedux 
+          addField={this.props.actions.addField}
+          PAGE_SELECT={this.props.actions.PAGE_SELECT}
+          page={this.props.page}
+        />
         <FormViewerRedux 
           fields={this.props.fields}
           removeField={this.props.actions.removeField}
@@ -51,7 +56,8 @@ class App extends Component {
 
 function mapStateToProps(state) {
   return {
-    fields: state.fields
+    fields: state.fields,
+    page: state.pageSelect
   };
 }
 
