@@ -19,7 +19,6 @@ export function removeField(field_Index) {
 }
 
 export function PAGE_SELECT(page) {
-  console.log(page);
   return {
     type: "PAGE_SELECT",
     page: page
