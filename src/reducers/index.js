@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
-import Fields from './fields.js';
+import fields from './fields.js';
 import pageSelect from './pageSelect.js';
 const rootReducer = combineReducers({
-	pageSelect: pageSelect,
-	fields: Fields
+	pageSelect,
+	fields
 });
 
 export default rootReducer;

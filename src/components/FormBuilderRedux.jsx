@@ -8,9 +8,7 @@ const builderStyle = {
 	display: "flex",
 	flexDirection: "column"
 }
-const btnStyle= {
-	margin: "3px"
-}
+
 
 //unordered list
 // 100% width
@@ -31,12 +29,7 @@ const pageNameStyle = {
 }
 
 
-const buttonNames = [
-	"textSingle",
-	"textParagraph",
-	"multipleChoice",
-	"checkBoxes"
-]
+
 
 const pageNames = [
 	"Add a Field",
@@ -45,7 +38,7 @@ const pageNames = [
 ]
 
 const FormBuilder = (props) => { 
-	console.log(props.PAGE_SELECT);
+	console.log(props);
 	return (
 
 	<div style={builderStyle}>

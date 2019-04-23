@@ -52,8 +52,3 @@ const Field = (props) => {
 export default Field;
 
 
-{/*
-	there will be a props.choices property for multiple choice and checkBoxes
-	props.choices will come from  an array in the field object in App state
-	props.choices will be a list of strings that determine the value prop of each input
-*/}
