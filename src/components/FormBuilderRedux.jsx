@@ -38,7 +38,6 @@ const pageNames = [
 ]
 
 const FormBuilder = (props) => { 
-	console.log(props);
 	return (
 
 	<div style={builderStyle}>
