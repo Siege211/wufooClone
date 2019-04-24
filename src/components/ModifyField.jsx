@@ -5,7 +5,6 @@ const ModifyField = (props) => {
 	return (
 	<div>
 		<h2>Modify Fields here</h2>
-		{!props.selectedField&&"0"}
 		{props.selectedField}
 	</div>
 	
