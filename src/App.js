@@ -34,6 +34,7 @@ class App extends Component {
 
 
   render() {
+    console.log(this.props);
     return (
       <div className="App" style={appStyle}>
       
@@ -41,6 +42,7 @@ class App extends Component {
           addField={this.props.actions.addField}
           PAGE_SELECT={this.props.actions.PAGE_SELECT}
           page={this.props.page}
+          selectedField={this.props.selectedField}
         />
         <FormViewerRedux 
           fields={this.props.fields}
@@ -53,9 +55,11 @@ class App extends Component {
 
 
 function mapStateToProps(state) {
+  //console.log("map state to props: ", state)
   return {
     fields: state.fields,
-    page: state.pageSelect
+    page: state.pageSelect,
+    selectedField: state.fieldSelect
   };
 }
 
