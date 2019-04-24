@@ -47,6 +47,7 @@ class App extends Component {
         <FormViewerRedux 
           fields={this.props.fields}
           removeField={this.props.actions.removeField}
+          FIELD_SELECT={this.props.actions.FIELD_SELECT}
         />
       </div>
     );
