@@ -26,7 +26,7 @@ export function PAGE_SELECT(page) {
 }
 
 
-export function FIELD_SELECT(field_Index) {
+export function FIELD_SELECT(field_Index = null) {
   return {
     type: "FIELD_SELECT",
     index: field_Index
