@@ -6,6 +6,7 @@ const ModifyField = (props) => {
 	<div>
 		<h2>Modify Fields here</h2>
 		{!props.selectedField&&"0"}
+		{props.selectedField}
 	</div>
 	
 	)
