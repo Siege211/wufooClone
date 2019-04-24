@@ -3,19 +3,24 @@ const initialState = {
       selectedField: null,
       fields: [
         {
+          fieldLabel: "",
           type: "textSingle"
         },
         {
+          fieldLabel: "",
           type: "textSingle"
         },
         {
+          fieldLabel: "",
           type: "textParagraph"
         },
         {
+          fieldLabel: "",
           type: "multipleChoice",
           choices: []
         },
         {
+          fieldLabel: "",
           type: "checkBoxes",
           choices: []
         }
