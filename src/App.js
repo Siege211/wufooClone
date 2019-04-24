@@ -57,9 +57,9 @@ class App extends Component {
 
 
 function mapStateToProps(state) {
-  //console.log("map state to props: ", state)
+  console.log("map state to props: ", state)
   return {
-    fields: state.fields,
+    fields: [...state.fields],
     page: state.pageSelect,
     selectedField: state.fieldSelect
   };
