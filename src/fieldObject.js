@@ -1,5 +1,5 @@
 class Field_Object {
-	constructor(type, fieldLabel = null, choices = null, range = null, value=null, placeHolder = null) {
+	constructor(type, value=null, placeHolder = null, fieldLabel = null, choices = null, range = null) {
 		this.type = type;
 		this.fieldLabel = fieldLabel;
 		this.choices = choices;
