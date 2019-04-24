@@ -5,7 +5,7 @@ const ModifyField = (props) => {
 	return (
 	<div>
 		<h2>Modify Fields here</h2>
-		{props.selectedField}
+		{JSON.stringify(props.fields[props.selectedField])}
 	</div>
 	
 	)
