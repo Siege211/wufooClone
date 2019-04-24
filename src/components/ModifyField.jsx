@@ -2,6 +2,7 @@ import React from 'react';
 
 
 const ModifyField = (props) => { 
+	console.log(props);
 	return (
 	<div>
 		<h2>Modify Fields here</h2>
