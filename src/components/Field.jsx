@@ -3,23 +3,24 @@ import React from 'react';
 const fieldStyle = {
 	margin:"3px",
 	alignSelf: "center",
-	justifySelf: "center"
+	justifySelf: "center",
+	border: "black 1px solid"
 }
 
 
 const Field = (props) => { 
 	if (props.inputType==="textSingle") {
 		return (
-			<div>
-					<input type="text" style={fieldStyle}/>
+			<div style={fieldStyle} onClick={()=>{props.FIELD_SELECT(props.FIELD_INDEX)}}>
+					<input type="text" />
 					{props.children}
 			</div>
 		)
 	}
 	else if (props.inputType==="textParagraph") {
 		return (
-			<div>
-				<input type="text" style={fieldStyle}/>
+			<div style={fieldStyle}>
+				<input type="text"/>
 				{props.children}
 			</div>
 		)
