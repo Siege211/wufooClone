@@ -56,8 +56,17 @@ const FormBuilder = (props) => {
 					}
 				)}
 		</span>
-		{props.page==="Add a Field" && <AddField addField={props.addField}/>}
-		{props.page==="Field Settings" && <ModifyField selectedField={props.selectedField}/>}
+		{props.page==="Add a Field" &&
+			<AddField 
+				addField={props.addField}
+			/>
+		}
+		{props.page==="Field Settings" &&
+			<ModifyField 
+				selectedField={props.selectedField}
+				fields={props.fields}
+			/>
+		}
 	</div>
 	
 	)
