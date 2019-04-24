@@ -4,7 +4,6 @@ const initialState = {
       page: "Add a Field",
       selectedField: null,
       fields: [
-        new Field_Object("textSingle"),
         {
           fieldLabel: "",
           type: "textSingle"
