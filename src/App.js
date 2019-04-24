@@ -43,6 +43,7 @@ class App extends Component {
           PAGE_SELECT={this.props.actions.PAGE_SELECT}
           page={this.props.page}
           selectedField={this.props.selectedField}
+          fields={this.props.fields}
         />
         <FormViewerRedux 
           fields={this.props.fields}
