@@ -4,7 +4,7 @@ export default function fieldSelect(state = initialState.selectedField, action) 
 	
 	switch(action.type) {
 		case "FIELD_SELECT":
-			return action.index
+			return action.index;
 		default: 
 			return state
 	}
