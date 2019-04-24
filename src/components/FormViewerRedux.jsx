@@ -22,6 +22,7 @@ const FormViewerRedux = (props) => {
 			 (field,i) => {
 			 		return (
 			 			<Field 
+			 				FIELD_INDEX={i}
 			 				key={`field#${i}`} 
 			 				inputType={field.type}
 			 				FIELD_SELECT={props.FIELD_SELECT}
