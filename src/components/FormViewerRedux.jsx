@@ -22,10 +22,15 @@ const FormViewerRedux = (props) => {
 			 (field,i) => {
 			 		return (
 			 			<Field 
+			 				FIELD_SELECT={props.FIELD_SELECT}
 			 				FIELD_INDEX={i}
 			 				key={`field#${i}`} 
 			 				type={field.type}
-			 				FIELD_SELECT={props.FIELD_SELECT}
+			 				field_Label={field.fieldLable}
+			 				choices={field.choices}
+			 				range={field.range}
+			 				value={field.value}
+			 				place_Holder={field.placeHolder}
 			 			>
 			 				<div style={{color:"red"}} onClick={()=>props.removeField(i)}>Delete this field</div>
 			 				
