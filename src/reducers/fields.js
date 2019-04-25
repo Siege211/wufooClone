@@ -1,15 +1,13 @@
-
 import initialState from '../store/initialState.js';
-
+import Field_Object from '../fieldObject.js';
 
 
 export default function updateFieldsList(state = initialState.fields,action) {
-  console.log(state)
-  console.log(action)
+
   switch(action.type) {
     
     case "ADD_FIELD":
-      return [...state, action]
+      return [...state, new Field_Object(action.fieldType)]
         //fields: Array.isArray(state)?state.concat({type:action.fieldType}):state.fields.concat({type:action.fieldType})
     case "REMOVE_FIELD":
       return state.filter((_, i) => i !== action.fieldIndex);
