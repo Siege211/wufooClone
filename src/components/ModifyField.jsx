@@ -6,8 +6,10 @@ const ModifyField = (props) => {
 	return (
 	<div>
 		<h2>Modify Fields here</h2>
-		{JSON.stringify(props.fields[props.selectedField])}
-		<Modifier />
+		{props.selectedField!==null && <Modifier 
+					FIELD_OBJECT={props.fields}
+					index={props.selectedField}
+				/>}
 	</div>
 	
 	)
