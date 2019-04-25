@@ -43,9 +43,20 @@ const Field = (props) => {
 				onClick={()=>{props.FIELD_SELECT(props.FIELD_INDEX)}}
 			>
 				<p>{props.field_Label}</p>
-				<input type="radio" name="options" value="choice 1" /> Choice 1<br/>
-				<input type="radio" name="options" value="choice 2" /> Choice 2<br/>
-				<input type="radio" name="options" value="choice 3" /> Choice 3<br/>
+				{props.choices.map( 
+					(choice, i) => {
+						return (
+							<div>
+							<input 
+								type={choice.type}
+								name={`${choice.name}#${props.FIELD_INDEX}`}
+								value={choice.value}
+							/>{choice.text}
+							</div>
+						)
+							
+					}
+				)}
 				{props.children}
 			</div>
 		)
