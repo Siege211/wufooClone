@@ -10,7 +10,7 @@ const fieldStyle = {
 
 const Field = (props) => { 
 	console.log(props)
-	if (props.inputType==="textSingle") {
+	if (props.type==="textSingle") {
 		return (
 			<div 
 				style={fieldStyle} 
@@ -21,7 +21,7 @@ const Field = (props) => {
 			</div>
 		)
 	}
-	else if (props.inputType==="textParagraph") {
+	else if (props.type==="textParagraph") {
 		return (
 			<div 
 				style={fieldStyle}
@@ -32,7 +32,7 @@ const Field = (props) => {
 			</div>
 		)
 	}
-	else if (props.inputType==="multipleChoice") {
+	else if (props.type==="multipleChoice") {
 		return(
 			<div 
 				style={fieldStyle}
@@ -45,7 +45,7 @@ const Field = (props) => {
 			</div>
 		)
 	}
-	else if (props.inputType === "checkBoxes") {
+	else if (props.type === "checkBoxes") {
 		return (
 			<div 
 				style={fieldStyle}

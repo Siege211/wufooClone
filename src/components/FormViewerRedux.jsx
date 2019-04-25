@@ -11,20 +11,20 @@ const formStyle = {
 
 
 const FormViewerRedux = (props) => { 
-	let iterable = props.fields.fields?props.fields.fields:props.fields;
+	let iterable = props.fields;
 	return (
 
 	<form style={formStyle}>
 		
 		{
-			iterable.map( 
+			props.fields.map( 
 
 			 (field,i) => {
 			 		return (
 			 			<Field 
 			 				FIELD_INDEX={i}
 			 				key={`field#${i}`} 
-			 				inputType={field.type}
+			 				type={field.type}
 			 				FIELD_SELECT={props.FIELD_SELECT}
 			 			>
 			 				<div style={{color:"red"}} onClick={()=>props.removeField(i)}>Delete this field</div>
