@@ -7,7 +7,7 @@ const ModifyField = (props) => {
 	<div>
 		<h2>Modify Fields here</h2>
 		{props.selectedField!==null && <Modifier 
-					FIELD_OBJECT={props.fields}
+					fields={props.fields}
 					index={props.selectedField}
 				/>}
 	</div>
