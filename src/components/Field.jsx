@@ -10,14 +10,17 @@ const fieldStyle = {
 
 const Field = (props) => { 
 	console.log(props)
+
+
 	if (props.type==="textSingle") {
 		return (
 			<div 
 				style={fieldStyle} 
 				onClick={()=>{props.FIELD_SELECT(props.FIELD_INDEX)}}
 			>
-					<input type="text" />
-					{props.children}
+				<p>{props.field_Label}</p>
+				<input type="text" />
+				{props.children}
 			</div>
 		)
 	}
@@ -27,6 +30,7 @@ const Field = (props) => {
 				style={fieldStyle}
 				onClick={()=>{props.FIELD_SELECT(props.FIELD_INDEX)}}
 			>
+				<p>{props.field_Label}</p>
 				<input type="text"/>
 				{props.children}
 			</div>
@@ -38,6 +42,7 @@ const Field = (props) => {
 				style={fieldStyle}
 				onClick={()=>{props.FIELD_SELECT(props.FIELD_INDEX)}}
 			>
+				<p>{props.field_Label}</p>
 				<input type="radio" name="options" value="choice 1" /> Choice 1<br/>
 				<input type="radio" name="options" value="choice 2" /> Choice 2<br/>
 				<input type="radio" name="options" value="choice 3" /> Choice 3<br/>
@@ -50,7 +55,8 @@ const Field = (props) => {
 			<div 
 				style={fieldStyle}
 				onClick={()=>{props.FIELD_SELECT(props.FIELD_INDEX)}}
-				>
+			>
+				<p>{props.field_Label}</p>
 				<input type="checkbox" /> choice A <br/>
 				<input type="checkbox" /> choice B <br/>
 				<input type="checkbox" /> choice C <br/>
