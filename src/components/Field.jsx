@@ -9,6 +9,7 @@ const fieldStyle = {
 
 
 const Field = (props) => { 
+	console.log(props)
 	if (props.inputType==="textSingle") {
 		return (
 			<div 
