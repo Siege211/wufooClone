@@ -6,3 +6,6 @@ class OPTION_OBJECT {
 		this.text = text;
 	}
 }
+
+
+export default OPTION_OBJECT;
