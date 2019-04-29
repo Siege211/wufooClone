@@ -33,9 +33,10 @@ export function FIELD_SELECT(field_Index = null) {
   }
 }
 
-export function MODIFY_FIELD(field_Index) {
+export function MODIFY_FIELD(field_Change, field_Property) {
   return {
     type: "MODIFY_FIELD",
-    index: field_Index
+    field_Change: field_Change,
+    field_Property: field_Property
   }
 }
